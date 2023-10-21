@@ -99,7 +99,7 @@ class HasGender(models.Model):
 
 class HasEffect(models.Model):
 
-    effect = models.CharField(max_length=6000)
+    effect = models.CharField(max_length=4000)
 
     class Meta:
         abstract = True
@@ -1905,4 +1905,4 @@ class PokemonTypePast(HasPokemon, HasType, HasGeneration):
 
 class PokemonSprites(HasPokemon):
 
-    sprites = models.CharField(max_length=20000)
+    sprites = models.CharField(max_length=4000)

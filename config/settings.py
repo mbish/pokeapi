@@ -62,25 +62,25 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "ENGINE": "mssql",
         "NAME": "pokeapi_co_db",
-        "USER": "root",
-        "PASSWORD": "pokeapi",
-        "HOST": "localhost",
+        "USER": "username",
+        "PASSWORD": "password",
+        "HOST": "host",
         "PORT": "",
         "CONN_MAX_AGE": 30,
     }
 }
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        },
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://127.0.0.1:6379/1",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         },
+#     }
+# }
 
 SECRET_KEY = os.environ.get(
     "SECRET_KEY", "ubx+22!jbo(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#"
@@ -98,6 +98,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.admin",
     "django.contrib.humanize",
+    "django.contrib.messages",
     "corsheaders",
     "rest_framework",
     "cachalot",
@@ -121,3 +122,19 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 20,
     "PAGINATE_BY": 20,
 }
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]

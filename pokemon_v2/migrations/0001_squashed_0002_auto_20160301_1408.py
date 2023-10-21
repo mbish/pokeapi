@@ -5980,7 +5980,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                     ),
                 ),
-                ("effect", models.CharField(max_length=6000)),
+                ("effect", models.CharField(max_length=4000)),
                 (
                     "ability_change",
                     models.ForeignKey(
@@ -6019,7 +6019,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                     ),
                 ),
-                ("effect", models.CharField(max_length=6000)),
+                ("effect", models.CharField(max_length=4000)),
                 ("short_effect", models.CharField(max_length=300)),
                 (
                     "ability",
@@ -6059,7 +6059,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                     ),
                 ),
-                ("effect", models.CharField(max_length=6000)),
+                ("effect", models.CharField(max_length=4000)),
                 ("short_effect", models.CharField(max_length=300)),
                 (
                     "item",
@@ -6099,7 +6099,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                     ),
                 ),
-                ("effect", models.CharField(max_length=6000)),
+                ("effect", models.CharField(max_length=4000)),
                 (
                     "contest_effect",
                     models.ForeignKey(
@@ -6138,7 +6138,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                     ),
                 ),
-                ("effect", models.CharField(max_length=6000)),
+                ("effect", models.CharField(max_length=4000)),
                 (
                     "language",
                     models.ForeignKey(
@@ -6177,7 +6177,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                     ),
                 ),
-                ("effect", models.CharField(max_length=6000)),
+                ("effect", models.CharField(max_length=4000)),
                 ("short_effect", models.CharField(max_length=300)),
                 (
                     "language",
@@ -6483,7 +6483,7 @@ class Migration(migrations.Migration):
                         null=True,
                     ),
                 ),
-                ("effect", models.CharField(max_length=6000)),
+                ("effect", models.CharField(max_length=4000)),
             ],
             options={
                 "abstract": False,

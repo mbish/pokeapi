@@ -11,6 +11,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="pokemonsprites",
             name="sprites",
-            field=models.CharField(max_length=20000),
+            field=models.CharField(max_length=4000),
         ),
     ]
